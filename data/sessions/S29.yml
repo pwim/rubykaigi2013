@@ -1,0 +1,94 @@
+---
+title: krypt. semper pi.
+description: "Many people don't like Cryptography. Whenever he falls out of a bar,
+  he carries this strong odor of ivory-towering, bikeshedding and plain, outright
+  arrogance. He seems to be a loner and a smartass, rude, and it's hard to follow
+  his boring, lengthy explanations. But once you get to know him better, it actually
+  turns out that he's really a nice guy. Sure, a little bit paranoid, but his intentions
+  are pure and just. He'll probably never be your buddy on Facebook ('cause he likely
+  won't set up an account in the first place), but over time you will realize that
+  it can be quite pleasant having him around. \n\n[krypt](https://github.com/krypt)
+  is the tool that tames him, and krypt is the tool that translates his sentences
+  into plain, understandable Ruby. Gone are the times when you just couldn't figure
+  out what parameters to use in order to please him, gone are the times when he would
+  take your passwords and not stow them away safely because yet again he didn't fully
+  understand what you were asking him to do.\n\nOK, this metaphor thing is getting
+  a little old now. krypt makes using crypto fun and easy, and it works on all Rubies
+  on all platforms (yep, Windows, too) - out of the box, no restrictions. It is about
+  diversity - it allows you to choose from different providers that are best-suited
+  for the particular task at hand. You'll get a whirlwind tour of how krypt is different
+  than other crypto libraries and why. You'll find out about the finer pieces of its
+  inner workings and you might take home a few tricks that evolved while developing
+  the native extensions that sit at the very heart of krypt. \n\nWith its recent integration
+  into JRuby, you might already be using krypt with JRuby right now without even knowing.
+  Learn about the details and how krypt is used to simulate OpenSSL features that
+  were not available in JRuby before. Find out more about how it can help making Ruby
+  a safer place. How it can help solving nasty problems such as signing our beloved
+  gems for example.\n \nkrypt tries to ultimately replace the OpenSSL extension in
+  the Ruby standard library, and with our combined effort we could actually steer
+  the story of Ruby cryptography towards a happy ending.\n\nFind out how!"
+notes: "I'd like to present krypt as the potential successor to the Ruby OpenSSL extension
+  in Ruby's standard library - making it the default provider for cryptography in
+  Ruby. While I like the OpenSSL extension, I believe there are certain problems with
+  it that cannot be solved easily. I want to show how krypt does and will solve these
+  problems. I would cover the goodies that distinguish krypt from traditional crypto
+  libraries and I would explain how and why I believe these parts to be better. The
+  recent adoption by JRuby has been a huge step forward for krypt, and the plan is
+  to make krypt the default crypto library in JRuby. The general plan is to make it
+  the default for all Rubies. I'd like to present the \"OpenSSL shim\" (a wrapper
+  around krypt that emulates the OpenSSL extension) as a showcase for how I believe
+  we could make the switch from OpenSSL to krypt painless in the future.\n\n\"Nice
+  story, but why should we care?\" you might ask. Just imagine the sheer magnitude
+  of things where the OpenSSL extension is involved today: https, gem downloads and
+  gem signing are some prominent examples. There's plenty more if you just dig deep
+  enough. That is quite a lot of places considered it's an extension that doesn't
+  have many friends out there. How happy would we all be if we had a cryptography
+  library that would truly embrace Ruby? How happy would we be if we didn't have to
+  stick just with OpenSSL, but use the cryptography library that is available by default
+  on the particular platform that we're on? If you're still not smiling with happiness,
+  I consider it my personal duty to make you in this talk! Let me show you how krypt
+  can make us happier programmers!\n\nI plan to describe the general design philosophies
+  behind krypt as well. I truly believe security-critical code should be written in
+  high-level languages opposed to the traditional languages C and C++. I want to show
+  some examples why the traditional way is a bad thing and how a higher-level language
+  like Ruby can make a huge difference there. I recently described the high-level
+  motivation behind krypt on my blog, if you're curious:\n\nhttp://emboss.github.com/blog/2012/12/02/krypt-the-next-level-of-ruby-cryptography/\n\nOne
+  further aspect that is also very interesting in a general Ruby context is the possibility
+  to securely erase passwords (meaning being able to completely wipe them from memory)
+  with krypt. This is something that currently isn't possible neither in Ruby nor
+  in other higher-level languages like Python, but considered essential practice when
+  writing secure programs. It's usually an argument why \"you should use C(++) or
+  Java to write security-critical code\". No more.\n\nI am going to publish a proposal
+  for signing gems soon. It will partly involve krypt, and if it should get any attention
+  and still be a possible candidate for implementation by the time of the conference,
+  then I would certainly want to lose a few words about it, too. I would try to explain
+  the motivation behind it, and how it would solve the authenticity problems that
+  currently exist with unsigned gems, but even with signed gems in their current form.\n\nWhile
+  this is of course a security-related talk, I believe that people not particularly
+  interested in cryptography might enjoy this talk, too, if not only to catch up with
+  a few best practices of how to implement code securely. Often this is an afterthought
+  (if at all) and I consider it my calling to open people's minds for security. Security
+  does not always have to be boring, I'll do my best to prove the opposite :)\n\nMuch
+  to my surprise, people do seem interested in these topics, my talk at RubyConf 2012
+  in Denver was well-received, better than I myself would have hoped for! Which brings
+  me to previous public talks that you wanted to know about: \n\n- RubyConf 2011 [http://confreaks.com/videos/683-rubyconf2011-ruby-openssl-present-future-and-why-it-matters]\n-
+  Railsberry 2012 (lightning talk) [http://www.youtube.com/watch?v=8J5SHRVcfhs]\n-
+  RubyConf 2012 [http://confreaks.com/videos/1311-rubyconf2012-krypt-the-next-level-of-ruby-cryptography]\n-
+  29C3 [http://www.youtube.com/watch?v=wGYj8fhhUVA]\n\nThank you for considering my
+  proposal, and thank you for reading this far!\n"
+spoken_language: English
+speakers:
+- name: Martin Bosslet
+  bio: Martin is a member of ruby-core, one of the maintainers of the Ruby OpenSSL
+    extension and the author of krypt. Cryptography is his passion, and not only after
+    the epiphany he had once realizing that his last name carries "ssl" in it. He's
+    been helping the European Commission to implement a digital signature platform,
+    and this was also the reason for krypt - so that he could do it in a sane language
+    for once.  He recently discovered blogging as a compensation for not haunting
+    other people with lengthy emails anymore (sorry, @nahi :).
+  company: Freelancer
+  location: Saarbruecken, Germany
+  gravatar: 1ecef11b3cc6abfda85798858745ef72
+  links:
+    github: emboss
+    twitter: _emboss_

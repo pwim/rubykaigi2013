@@ -1,0 +1,22 @@
+---
+title: The Future of JRuby?
+description: |-
+  JRuby is a fast, compliant Ruby implementation which can make use of many features of the Java platform.  What more is there to do?  Can it be made faster?  Will it ever load faster?  Any plans on making cross-implementation native C extension API?
+
+  This presentation will answer questions like this and give some examples of exciting future projects involving JRuby.  If you want a good insight into where JRuby is going then this talk is for you.
+notes: |-
+  This will be a collection of implementation specific projects (IR, invokedynamic, IR incremental loading) to end-user affecting projects (cross-impl native C extension API).  In some cases these are experiments and in others they are things which will be in our next major version of JRuby.
+
+  This talk should be very interesting for both MRI committers to see what JRuby is planning for Ruby programmers to see how JRuby will change in the future.
+spoken_language: English
+speakers:
+- name: Thomas E. Enebo, Charles O. Nutter
+  bio: Thomas Enebo and Charles Nutter are the co-leads of the JRuby project. They
+    have been passionately working on JRuby for many years. When not working on JRuby,
+    they are writing Ruby applications, playing with Java, and enjoying a decent beer.
+  company: Red Hat, Red Hat
+  location: Minneapolis, MN, USA
+  gravatar: a32df2dafca6c46e49332270218c078f
+  links:
+    github: enebo, headius
+    twitter: tom_enebo, @headius

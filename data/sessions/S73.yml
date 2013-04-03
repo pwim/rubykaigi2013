@@ -1,0 +1,28 @@
+---
+title: Toward efficient Ruby 2.1
+description: "In this presentation, I will show the ways to achieve more efficient
+  \nRuby 2.1 interpreter, the next release of CRuby/MRI. My talk will \ninclude VM/compilier
+  optimizations, memory/object management and runtime \nlibraries modification. Most
+  of techniques and implementations may be \nwork in progress.\n"
+notes: "角谷さんより、\n> ちなみに、ささださんにつきましては、CFPのデッドラインにこだわらずに、ぶちかますすごいトークについて構想を練っていただければと思っております!!\n\nと伺ったので、甘えまして、Abstract
+  が微妙な感じとなっております。申し訳\nありません。work in progress というか、今何をしているか、これから何をす\nるべきか、という話になると思うため、まだ具体的な話を書けない状況です。5\n月イッパイで発表内容をまとめると思いますので、4月末くらいに概要が
+  fix す\nると思っております。\n\n現在検討中のテーマを以下に示します。\n\n* コンパイルおよびロード（require）の高速化\n\nRubyスクリプトの読み込みには、(1)
+  ファイルの探索、および (2) パース・コ\nンパイルという手段を踏む必要があり、起動時のオーバヘッドとなっています。\nこれを解決するため、事前コンパイルなどが提案されていますが、これを
+  Ruby \n2.1 から利用可能にするための require の拡張を提案します。具体的には、(1) \nを高速化するために、ロケーションデータベースからのロード箇所の特定、およ\nび
+  (2) のための事前コンパイルおよびコンパイル結果のパッキングを提案しま\nす。\n\n* 簡単な命令のインライン化方式の提案など\n\n現在、どのメソッドを実行しようとしても、必ずRuby
+  VMのメソッドフレームを\n生成するため、そのメソッドが単純なものであればあるほど、メソッド呼び出し\nのオーバヘッドは無視できないものとなっています。実際、Rubyには規模の小さ\nいメソッドに分けることが良いプラクティスとされているため、この問題の影響\nは大きいと考えられます。ここでは、簡単な命令（Rubyレベル、Cレベル）をイ\nンラインで呼び出すためのフレームワークを提案し、どの程度性能向上が得られ\nるか示します。\n\n*
+  文字列の重複排除、およびシンボルGCの導入\n\nランタイム内に同一の文字列があった場合、CoW を用いることで利用するメモリ\nを削減することが出来ます。現状では特定の場合のみCoWを行っていますが、さ\nらにこれを簡単に実現する方法を提案します。これを実現するフレームワークを\n作成することで、ついでにシンボルGCが実現できることを示します。ただし、本\n方式でシンボルGCを導入した場合、非互換が生じるため、これについて紹介し、\n受け入れられるかどうか問題提起としたいと考えています。\n\n*
+  世代別GCをサポートするための細粒度メモリ保護\n\nRubyに世代別GCを実装しようという提案はいくつかありましたが、結局入ってい\nません。アルゴリズムは単純ですが、正しく実装するのがとても難しい、という\n問題があります。主な原因はプログラム全体を確認し、適切にライトバリアを挿\n入する必要があるためです。これを適切に挿入するには、基本的には根性を使う、\nということが考えられますが、あまり科学的な姿勢ではありません。そこで、本\n研究では発見を容易に行うことができるように、細粒度メモリ保護機構をRuby処\n理系に導入することでライトバリアの位置を特定できることを示します。実装に\nはvalgrindによる動的命令書き換えを用います。\n\n*
+  その他\n\n細かい話は色々あります。2.1 では具体的にどれを入れるか、入れられるかにつ\nいて紹介したいと思います。\n\nまだ外に出していない情報であり、まだ確実さがないため外に漏れるとまずい段\n階ですが、proposal
+  の内容は当然のことながら秘匿されると信じています :)\n\nなお、Ruby における並列・並行プログラムについての現状と展望を語る、とい\nう提案も検討していたのですが、5月までに具体的な提案ができそうにないため、\n上記テーマを考えました。\n\nよろしくご検討下さい。\n"
+spoken_language: Japanese
+speakers:
+- name: Koichi Sasada
+  bio: |
+    Koichi Sasada is a member of Matz's team in Heroku, Inc. He concentrates on Ruby development, especially virtual machine development for next release.
+  company: Heroku, Inc.
+  location: Tokyo, Japan
+  gravatar: 
+  links:
+    github: ko1
+    twitter: koichisasada

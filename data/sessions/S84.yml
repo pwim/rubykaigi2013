@@ -1,0 +1,21 @@
+---
+title: Ruby on Your Rails
+description: My Rails are not like yours. I'm gonna tell you why and how.
+notes: |-
+  Ingredients:
+  * Rails 4
+  * DHH's attitude and philosophy
+  * Changes I've introduced for Rails 4
+  * RoR bad parts
+  * Some idea for improvement
+  * Rails 5
+spoken_language: English
+speakers:
+- name: Akira Matsuda
+  bio: Rails committer, Ruby core, Asakusa.rb
+  company: Asakusa.rb
+  location: Tokyo
+  gravatar: 76a777ff80f30bd3b390e275cce625bc
+  links:
+    github: amatsuda
+    twitter: a_matsuda

@@ -1,0 +1,31 @@
+---
+title: Rapid development of enterprise web apps with Netzke
+description: Netzke is a library that allows creating full-featured client-server
+  GUI components - such as data grids, forms, windows, trees, etc - which then can
+  be easily used as building blocks for complex enterprise applications. It uses Ruby
+  on Rails at the server-side, and Sencha Ext JS in the browser. The choice of Ext
+  JS provides for consistent look and feel, as well as for painless reusability of
+  third-party Netzke components. Most importantly, Netzke allows for writing clean
+  and highly maintainable code, which almost doesn't grow with the number of data
+  models being used. After a brief introduction to the basics of Netzke design, a
+  live coding session will be held to show how to build an example of a fairly complex
+  back-end application with Netzke - by almost exclusively writing Ruby code.
+notes: I have spoken about Netzke at the latest RubyConf Taiwan, and it was very well
+  received, with Matz and others from the Ruby team giving their positive feedback
+  and expressing their wish to see a talk about Netzke at RubyKaigi. I decided I'd
+  keep my introductory, "theoretical" part as brief as possible, and focus on showing
+  some cool code instead. This way it'll be easier for the majority of Japanese attendants
+  to follow (I don't mean to offend anyone here!) Also, it will be a completely new
+  talk, with a demo application crafted exclusively for RubyKaigi.
+spoken_language: English
+speakers:
+- name: Max Gorin
+  bio: Max Gorin, aka nomadcoder, is a traveling web developer with 5 years of experience
+    in Ruby and JavaScript development. He's strongly convinced that writing code
+    can (and should!) be sheer fun. Hey, that's also why he created Netzke!
+  company: 
+  location: Amsterdam, the Netherlands
+  gravatar: b472b6e2dfd982ec3995cf4471b4c1e4
+  links:
+    github: nomadcoder
+    twitter: nomadcoder

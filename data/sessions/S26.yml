@@ -1,0 +1,59 @@
+---
+title: From Rails to the web server to the browser
+description: |-
+  Most of us know how to build beautiful web applications with Rails. With the help of templating tools like ERB and HAML our web apps create HTML documents, but, do you know exactly how those HTML documents end up in a browser?
+
+  During this talk I will show you the bits that make it all happen. We will dissect the relevant code within Rails, Rack and the thin web server to discover exactly how the web server starts and listens to a TCP port, communicates with Rails and returns the HTML document that your browser parses.
+
+  Why? Because we're curious about it, that's why.
+notes: |
+  I did this experiment once while being curious about how the raw HTTP protocol and lifecycle worked.
+
+  I chose thin because it is written in Ruby and its code is very understandable.
+
+  There will be almost no slides during this talk, most of it will happen in a Code Editor while I explain the different calls back and forth between thin, EventMachine, Rack and Rails.
+
+  We will part from the following test case:
+
+  require 'test/unit'
+  require 'net/http'
+
+  class TestServer < Test::Unit::TestCase
+    def test_the_request
+      uri = URI('http://127.0.0.1:8081/')
+      assert_equal Net::HTTP.get(uri), "Hello World"
+    end
+  end
+
+  Then, proceed to make it work as a Rails app, then, as a Rack app, then, as an EventMachine script. While doing this, we will explore the following ideas:
+
+  * All Rails apps are Rack apps.
+  * When thin starts, it detects a Rack app and uses its rack adapter.
+  * How that adapter interacts with the Rack app.
+  * When Thin starts internally it starts an EventMachine process.
+  * Start an EventMachine process and call the Rack app without thin.
+  * Make the EventMachine process serve the HTML without the Rack app.
+  * You can make that EventMachine answer whatever protocol you write.
+
+  The objectives of this talk are:
+
+  * Encourage developers to be curious about their tools and frameworks.
+  * Reading code is always a fun way to learn new things.
+  * Promote the fact that you can create Rack apps!
+  * Show how you can write EventMachine services and your own protocols very easy.
+spoken_language: English
+speakers:
+- name: David Padilla
+  bio: |+
+    David Padilla is CEO at Crowd Interactive, a leader Ruby on Rails consultancy based in Mexico.
+
+    He's usually trying out all the new technologies that come out everyday, and, sometimes, just knowing how to use them is not enough, so, he spends a lot of his free time reading other people's code.
+
+    Through his career, he has been devoted to promoting the Ruby on Rails community in Mexico through rails.mx and the organization of the only Ruby conference in the area: Magma Conf.
+
+  company: Crowd Interactive / CEO
+  location: Colima, Mexico
+  gravatar: a59cda5de705716cbd18195a4dd68a56
+  links:
+    github: dabit
+    twitter: dabit

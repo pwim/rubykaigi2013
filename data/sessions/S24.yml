@@ -1,0 +1,25 @@
+---
+title: |
+  The Origamist's Ruby: Folding better codeWhile both Japanese in origin, Origami and the Ruby programming language have a lot in common. This talk will make parallels between the two with the goal of presenting various techniques at becoming a better artist of code.
+description: |
+  Origami and the Ruby programming language have a lot more in common than having Japanese roots. This talk will make parallels between the two with the goal of presenting various techniques at becoming a better artist of code.
+notes: This talk is new and specifically written for this conference. I feel like
+  the topic is perfect for the RubyKaigi audience. This will be a great session because
+  I'm really enthusiastic about both coding and origami. I feel like under the surface
+  both of these things have complimented each other to help me become a better programmer
+  and I wish to share this. I've previously spoken at local ruby user groups on complex
+  topics such as using Ragel in Ruby (where I did live coding). I plan to include
+  live folding with my presentation to emphasize points in the talk. I also have been
+  learning Japanese for some time and while not fluent I hope to include Japanese
+  text on my slides. どうもありがとうございます！
+spoken_language: English
+speakers:
+- name: Matthew Mongeau
+  bio: |
+    I am a developer and the instructor of the Intro to Ruby on Rails and Intermediate Rails workshops at thoughtbot. I've been writing Ruby since I fell in love with it 6 years ago.
+  company: thoughtbot / developer
+  location: Boston, USA
+  gravatar: b066cb3c505933f832faa83238489a89
+  links:
+    github: halogenandtoast
+    twitter: halogenandtoast

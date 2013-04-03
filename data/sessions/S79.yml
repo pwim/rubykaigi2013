@@ -1,0 +1,27 @@
+---
+title: The gleaning of 2.0.0 features.
+description: |-
+  (English)
+  There's bunch of novel features released with Ruby 2.0.0.
+  Major features - keyword argument, Module#prepend, Enumerator::Lazy, DTrace, refinement, default script encoding, String#b etc.. - may be explained  other committers or Rubyist.
+  In this talk, I'll introduce minor features and changes introduced quietly with Ruby 2.0.0. These trivia make you more well-trained Rubyists.
+
+  (日本語)
+  先日リリースされた Ruby 2.0.0 にはたくさんの新機能があります。特に大きな新機能 (キーワード引数、Module#prepend、Enumerator::Lazy、DTrace、refinement、デフォルトスクリプトエンコーディングの UTF-8化と String#b の導入など)については、コミッタやその他のRubyistの皆さんが紹介してくれることと思います。
+  この発表では、ひっそりと導入されてあまり紹介もされないであろうマイナーな新機能や変更点を紹介します。「こんなマイナーな機能まで知ってるんだぜ」と他のRubyistに一歩差をつける、そんなトリビアをご提供します。
+notes: |-
+  2.0.0 のメジャーな新機能は他の発表者(それもおそらくまつもとさんや実装者など)が詳しく解説されるものと思います。
+  本発表はそのすきまを埋めるように、あまり触れられる機会がない機能や変更点を紹介するします。また紹介する機能の量によっては開発の経緯や仕様の変遷などにも触れたいと思います。それにより Ruby 2.0.0 の開発につぎこまれた豊潤な開発リソースを知ってもらい、Ruby 自体の開発を身近に感じ、興味を持ってもらうことを目指します。
+
+  発表者は ruby-trunk-changes (http://d.hatena.ne.jp/nagachika/searchdiary?word=*[changes]) という、Ruby リポジトリの trunk へのコミットを読み解説するという記事を2年半ほど書いており、細かな変更点を洗い出すのにはおそらくもっとも向いています。
+spoken_language: Japanese
+speakers:
+- name: Tomoyuki,Chikanaga
+  bio: CRuby committer. Writing ruby-trunk-changes (explains every commit to ruby
+    repository in Japanese).
+  company: 
+  location: Fukuoka, Japan
+  gravatar: 5cf8f058a4c094bb708174fb43e7a387
+  links:
+    github: nagachika
+    twitter: nagachika

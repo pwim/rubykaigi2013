@@ -1,0 +1,25 @@
+---
+title: Paired ruby
+description: Pair programming shares a similar philosophy with Ruby- the focus is
+  on  people solving problems for other people, not the machine. I want to share my
+  experiences with pair programming and how it helped me become a better engineer,
+  enjoy coding more, and maybe even grow as a person.
+notes: I am a developer at Pivotal Labs where we write ruby in a pair programming
+  setup full time. When I started, it completely transformed the way that I do development,
+  and I would love to share that experience with other engineers. I haven't given
+  this topic at a large conference yet, but I have given it at several local ruby
+  user groups in my area where it is always positively received. I think it would
+  be interesting for RubyKaigi since I don't see that many process talks- most of
+  them are fairly technical, so this might be a refreshing change. I also think the
+  unique angle that I bring to the topic of pair programming is that I feel like it
+  can be a powerful method of self-improvement.
+spoken_language: English
+speakers:
+- name: John Foley
+  bio: John Foley is a developer at Pivotal Labs in Boulder, Colorado
+  company: Software Engineer, Pivotal Labs
+  location: Boulder, USA
+  gravatar: 
+  links:
+    github: jfoley
+    twitter: jw_foley
